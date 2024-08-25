@@ -373,6 +373,38 @@ section .p-contents {
   }
 
   /* ヘッダーとフッターの調整 */
+  /* ヘッダーの調整 */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  header h1 a {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+
   header, footer {
     font-size: 20px;
     padding: 10px;
