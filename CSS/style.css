@@ -362,3 +362,82 @@ section .p-contents {
 #x {
   font-size: 24px;
 }
+
+/* モバイル対応用のメディアクエリ */
+@media (max-width: 768px) {
+
+  /* モバイル用のbodyの余白調整 */
+  body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  /* ヘッダーとフッターの調整 */
+  header, footer {
+    font-size: 20px;
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  /* topImageの調整 */
+  #topImage {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  #topImage img {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  /* セクションの調整 */
+  .container03 {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .container03 .work {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .container03 .work img {
+    width: 100%;
+    height: auto;
+  }
+
+  .box2, .hover-image, .box, .button {
+    width: 100%;
+    height: auto;
+  }
+
+  /* セクションタイトルの調整 */
+  .section-title {
+    font-size: 28px;
+  }
+
+  /* Outputセクションの調整 */
+  #output {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #footer-content {
+    flex-direction: column;
+    gap: 1
