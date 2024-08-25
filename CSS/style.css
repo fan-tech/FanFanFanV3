@@ -1,3 +1,9 @@
+.dotgothic16-regular {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* 共通のスタイル */
 body {
   margin: 0;
@@ -14,6 +20,7 @@ body {
 
 /* ヘッダーとフッターのスタイル */
 header, footer {
+  font-size: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +40,7 @@ header {
 
 h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 36px;
   border: 2px solid #333;
   padding: 5px 10px;
 }
@@ -119,7 +126,6 @@ footer {
 #footer-content img {
   width: 150px;
   height: auto;
-  transform: translateY(-3px);
   /* 画像を3px上に移動 */
 }
 
@@ -351,4 +357,8 @@ section .p-contents {
 
 #profile {
   margin-top: 200px;
+}
+
+#x {
+  font-size: 24px;
 }
