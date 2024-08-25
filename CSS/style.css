@@ -531,8 +531,15 @@ section .p-contents {
     padding: 20px;
   }
 
+  footer {
+    padding: 15px;
+  }
+
   #footer-content {
-    flex-direction: column;
-    gap: 1
+    gap: 5px;
+  }
+
+  #footer-content img {
+    width: 80px;
   }
 }
