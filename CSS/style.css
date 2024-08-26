@@ -437,6 +437,7 @@ p.p-contents {
   }
 
   body {
+    overflow-x: hidden;
     padding-top: 60px;
     font-size: 14px;
   }
