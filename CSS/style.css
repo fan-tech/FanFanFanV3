@@ -4,6 +4,20 @@
   font-style: normal;
 }
 
+/* 初期状態：透明で少し下に配置 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+  /* 時間を長めに */
+}
+
+/* 表示された状態 */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* 共通のスタイル */
 body {
   margin: 0;
@@ -215,6 +229,10 @@ main {
   /* outputとworksの間にスペースを確保 */
 }
 
+.container03 {
+  margin: 0 auto;
+}
+
 .container03 .work {
   flex: 1 1 calc(33.333% - 20px);
   /* 最初の3つを1行に配置 */
@@ -297,9 +315,9 @@ section .p-contents {
   /* コンテンツを中央に配置 */
   align-items: center;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: white;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 /* セクションタイトルのスタイル */
@@ -407,7 +425,6 @@ section .p-contents {
     top: 0;
     left: 0;
     width: 100%;
-    /* ヘッダーを画面全体に広げる */
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -416,6 +433,7 @@ section .p-contents {
   /* ヘッダーの高さ分の余白を確保 */
   body {
     padding-top: 60px;
+    font-size: 14px;
   }
 
   /* ハンバーガーメニューの表示 */
@@ -450,7 +468,6 @@ section .p-contents {
     position: absolute;
     top: 60px;
     right: 10%;
-    padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
@@ -470,6 +487,46 @@ section .p-contents {
     display: block;
   }
 
+  /* worksセクションのwork要素を縦に並べる */
+  #works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .box {
+    border: none;
+  }
+
+  .work {
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .work a {
+    width: 80%;
+    text-align: center;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
   /* h1のフォントサイズ調整 */
   h1 {
     font-size: 28px;
@@ -479,7 +536,6 @@ section .p-contents {
   #topImage {
     width: 90%;
     height: auto;
-    margin: 20px auto;
   }
 
   #topImage img {
@@ -489,6 +545,7 @@ section .p-contents {
 
   /* セクションの調整 */
   .container03 {
+    margin-top: 50px;
     width: 90%;
     padding: 20px;
   }
@@ -517,7 +574,6 @@ section .p-contents {
   #output {
     width: 90%;
     padding: 20px;
-    margin-bottom: 15px;
   }
 
   footer {
@@ -532,6 +588,33 @@ section .p-contents {
   }
 
   .container-04 {
-    margin-bottom: 20px;
+    margin-bottom: 250px;
+  }
+
+  #fanImage {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  section {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  main {
+    display: block;
+  }
+
+  #topImage {
+    margin-top: 45%;
+
+  }
+
+  #marginbox {
+    height: 1px;
+    margin-top: -100px;
   }
 }

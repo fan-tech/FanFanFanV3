@@ -10,3 +10,33 @@ document.querySelectorAll("nav ul li a").forEach(function (link) {
     document.querySelector("nav ul").classList.remove("open");
   });
 });
+
+//
+//
+//
+document.addEventListener("DOMContentLoaded", function () {
+  const faders = document.querySelectorAll(".fade-in");
+
+  const appearOptions = {
+    threshold: 0.1, // 10%が表示されたときにアニメーション開始
+  };
+
+  const appearOnScroll = new IntersectionObserver(function (
+    entries,
+    appearOnScroll
+  ) {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      } else {
+        entry.target.classList.add("show");
+        appearOnScroll.unobserve(entry.target);
+      }
+    });
+  },
+  appearOptions);
+
+  faders.forEach((fader) => {
+    appearOnScroll.observe(fader);
+  });
+});
