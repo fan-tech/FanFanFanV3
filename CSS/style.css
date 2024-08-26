@@ -501,6 +501,7 @@ section .p-contents {
 
   .work {
     width: 90%;
+    margin: 0 auto;
     margin-bottom: 20px;
     padding: 10px;
     box-sizing: border-box;
