@@ -211,7 +211,7 @@ main {
   box-sizing: border-box;
   margin: 10px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -388,7 +388,7 @@ p.p-contents {
   box-sizing: border-box;
   margin: 10px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -420,6 +420,8 @@ p.p-contents {
 
 /*  モバイル */
 @media (max-width: 768px) {
+
+
   header {
     position: fixed;
     top: 0;
@@ -552,7 +554,7 @@ p.p-contents {
   }
 
   #topImage {
-    margin-top: 25%;
+    margin-top: 20%;
   }
 
   #marginbox {

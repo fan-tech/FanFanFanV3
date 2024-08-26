@@ -57,3 +57,7 @@ html {
 div {
   padding: 0;
 }
+
+#topImage {
+  margin: 0 auto;
+}
