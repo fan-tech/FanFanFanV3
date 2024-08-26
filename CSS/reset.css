@@ -53,3 +53,7 @@ table {
 html {
   scroll-behavior: smooth;
 }
+
+div {
+  padding: 0;
+}

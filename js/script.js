@@ -1,13 +1,26 @@
-document.querySelector(".menu-toggle").addEventListener("click", function () {
-  this.classList.toggle("open");
-  document.querySelector("nav ul").classList.toggle("open");
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+  const topLink = document.querySelector('a[href="#top"]');
 
-document.querySelectorAll("nav ul li a").forEach(function (link) {
-  link.addEventListener("click", function () {
-    // メニューがタップされたら、三本線に戻る
-    document.querySelector(".menu-toggle").classList.remove("open");
-    document.querySelector("nav ul").classList.remove("open");
+  // ハンバーガーメニューの開閉
+  menuToggle.addEventListener("click", function () {
+    menu.classList.toggle("open");
+    menuToggle.classList.toggle("open");
+  });
+
+  // メニューリンクをクリックしたときにメニューを閉じる
+  menu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      menu.classList.remove("open");
+      menuToggle.classList.remove("open");
+    });
+  });
+
+  // topリンクをクリックしたときにメニューを閉じる
+  topLink.addEventListener("click", function () {
+    menu.classList.remove("open");
+    menuToggle.classList.remove("open");
   });
 });
 

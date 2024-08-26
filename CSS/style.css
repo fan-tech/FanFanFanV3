@@ -9,7 +9,6 @@
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 2s ease-out, transform 2s ease-out;
-  /* 時間を長めに */
 }
 
 /* 表示された状態 */
@@ -32,7 +31,6 @@ body {
   box-sizing: border-box;
 }
 
-/* ヘッダーとフッターのスタイル */
 header, footer {
   font-size: 24px;
   display: flex;
@@ -48,8 +46,6 @@ header, footer {
 
 header {
   top: 0;
-  /* ヘッダーの内容が左寄せにならないように調整 */
-  justify-content: space-between;
 }
 
 h1 {
@@ -75,7 +71,6 @@ h1 a:active {
 
 nav {
   margin-right: 2%;
-  /* navを右から5%内側に寄せる */
 }
 
 nav ul {
@@ -97,11 +92,10 @@ nav ul li a {
   padding: 5px 10px;
 }
 
-/* フッターとそのコンテンツのスタイル */
+/* フッターのスタイル */
 footer {
   display: flex;
   justify-content: center;
-  /* フッターの内容を中央に配置 */
   align-items: center;
   padding: 10px 20px;
   background-color: #fff;
@@ -110,7 +104,6 @@ footer {
   bottom: 0;
   width: 100%;
   height: 60px;
-  /* フッターの高さを設定 */
   text-align: center;
   z-index: 1000;
   box-sizing: border-box;
@@ -122,7 +115,6 @@ footer {
   align-items: center;
   width: 100%;
   margin-bottom: 400px;
-  /* マージンを400pxに設定 */
 }
 
 #footer-content {
@@ -140,7 +132,6 @@ footer {
 #footer-content img {
   width: 150px;
   height: auto;
-  /* 画像を3px上に移動 */
 }
 
 /* 各セクションのスタイル */
@@ -152,10 +143,7 @@ main {
   width: 100%;
   box-sizing: border-box;
   padding: 20px 0;
-  /* コンテナ間に余裕を持たせる */
 }
-
-
 
 #container01 {
   display: flex;
@@ -166,7 +154,6 @@ main {
   width: 100%;
   margin-top: 200px;
   margin-bottom: 100px;
-  /* 各コンテナに余裕を持たせたマージン */
   box-sizing: border-box;
 }
 
@@ -176,11 +163,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 80%;
-  /* 幅を少し狭くして中央に寄せる */
   margin: 0 auto;
-  /* 中央寄せ */
-  padding: 100px;
-  /* 内側にパディングを追加 */
   box-sizing: border-box;
 }
 
@@ -192,7 +175,6 @@ main {
   flex: 1;
   width: 100%;
   margin-top: 200px;
-  /* 各コンテナに余裕を持たせたマージン */
   box-sizing: border-box;
 }
 
@@ -202,11 +184,8 @@ main {
   justify-content: center;
   align-items: center;
   width: 80%;
-  /* 画像の幅を80%に設定 */
   height: calc(100vh - 160px);
-  /* headerとfooterの高さを引いた高さにマージン分を追加 */
   margin: 20px auto;
-  /* 中央寄せとゆとりを持たせたマージン */
   box-sizing: border-box;
 }
 
@@ -226,20 +205,12 @@ main {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 20px;
-  /* outputとworksの間にスペースを確保 */
-}
-
-.container03 {
-  margin: 0 auto;
 }
 
 .container03 .work {
-  flex: 1 1 calc(33.333% - 20px);
-  /* 最初の3つを1行に配置 */
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin: 10px;
   padding: 20px;
-  /* マージンを減らして要素間を詰める */
   background-color: #f9f9f9;
   border-radius: 10px;
   display: flex;
@@ -249,26 +220,25 @@ main {
   text-align: center;
 }
 
-/* 特定の要素を1行にまとめる */
+/* ワリカンまでを1行に配置 */
+.container03 .work:nth-child(1),
+.container03 .work:nth-child(2),
+.container03 .work:nth-child(3) {
+  flex: 1 1 calc(33.333% - 40px);
+  /* 3つを1行に並べる */
+}
+
+/* 残りの要素を2行に配置 */
 .container03 .work:nth-child(4),
 .container03 .work:nth-child(5) {
-  flex: 1 1 calc(50% - 20px);
-  /* 次の2つを次の行に配置 */
+  flex: 1 1 calc(50% - 40px);
+  /* 2つを1行に並べる */
 }
 
 .container03 .work img {
-  width: 250px;
-  height: 195px;
+  width: 100%;
+  height: auto;
   margin-bottom: 10px;
-  display: block;
-  /* 同じ枠線スタイルを追加 */
-  box-sizing: border-box;
-  /* ボーダーを含めてサイズを計算 */
-}
-
-.container03 .work p.p-contents {
-  margin: 20px 0 0 0;
-  padding: 0;
 }
 
 section .p-contents {
@@ -276,19 +246,25 @@ section .p-contents {
   padding: 0;
 }
 
+h3 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+p.p-contents {
+  margin-top: 30px;
+}
+
 .box2 {
   width: 250px;
   height: 195px;
-  /* 高さを自動調整 */
   border: 2px solid #333;
   display: flex;
   flex-direction: column;
-  /* 要素を縦に並べる */
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 10px;
-  /* ボタン間にスペースを追加 */
   box-sizing: border-box;
 }
 
@@ -297,14 +273,11 @@ section .p-contents {
   height: 195px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 5px;
-  /* 画像の角を丸くする */
 }
 
 .hover-image:hover {
   transform: scale(1.05);
-  /* 画像をホバー時に拡大 */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  /* 影を追加 */
 }
 
 /* outputセクションのスタイル */
@@ -312,7 +285,6 @@ section .p-contents {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* コンテンツを中央に配置 */
   align-items: center;
   padding: 20px;
   background-color: white;
@@ -320,7 +292,6 @@ section .p-contents {
   margin-top: 30px;
 }
 
-/* セクションタイトルのスタイル */
 .section-title {
   font-size: 36px;
   font-weight: bold;
@@ -338,16 +309,13 @@ section .p-contents {
 .box {
   width: 250px;
   height: 195px;
-  /* 高さを自動調整 */
   border: 2px solid #333;
   display: flex;
   flex-direction: column;
-  /* 要素を縦に並べる */
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 10px;
-  /* ボタン間にスペースを追加 */
   box-sizing: border-box;
 }
 
@@ -361,16 +329,12 @@ section .p-contents {
   font-size: 16px;
   border-radius: 5px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  /* ホバーアニメーションをhover-imageと統一 */
 }
 
 .button:hover {
   transform: scale(1.05);
-  /* 画像と同じホバーアニメーションを追加 */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  /* 影を追加 */
   background-color: #555;
-  /* 背景色を変更 */
 }
 
 #profile {
@@ -382,17 +346,13 @@ section .p-contents {
 }
 
 /* ハンバーガーメニューのスタイル */
-
-
 .menu-toggle span {
   display: block;
   width: 100%;
   height: 3px;
   background-color: #333;
-  /* 見える色に設定 */
   transition: all 0.3s;
   opacity: 1;
-  /* 見えるようにする */
 }
 
 .menu-toggle {
@@ -404,22 +364,62 @@ section .p-contents {
   cursor: pointer;
   position: absolute;
   right: 40px;
-  /* 右端からの距離を指定 */
   top: 50%;
   transform: translateY(-50%);
-
   z-index: 1002;
-  /* header や nav よりも高い値を設定 */
 }
 
-/* ハンバーガーメニューが開いているときに三本線を非表示にする */
 .menu-toggle.open span {
   opacity: 0;
 }
 
-@media (max-width: 768px) {
+/* worksセクションのスタイル */
+#works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 
-  /* ヘッダーをモバイルで上部固定 */
+.container03>.work {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ワリカンまでを1行に配置 */
+.container03>.work:nth-child(1),
+.container03>.work:nth-child(2),
+.container03>.work:nth-child(3) {
+  flex: 1 1 calc(33.333% - 40px);
+  /* 3つを1行に並べる */
+}
+
+/* 残りの要素を2行に配置 */
+.container03>.work:nth-child(4),
+.container03>.work:nth-child(5) {
+  flex: 1 1 calc(50% - 40px);
+  /* 2つを1行に並べる */
+}
+
+.container03 .work img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/*  モバイル */
+@media (max-width: 768px) {
   header {
     position: fixed;
     top: 0;
@@ -430,13 +430,11 @@ section .p-contents {
     z-index: 1000;
   }
 
-  /* ヘッダーの高さ分の余白を確保 */
   body {
     padding-top: 60px;
     font-size: 14px;
   }
 
-  /* ハンバーガーメニューの表示 */
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -459,7 +457,6 @@ section .p-contents {
     transition: all 0.3s;
   }
 
-  /* nav ul を非表示にしておく */
   nav ul {
     display: none;
     flex-direction: column;
@@ -471,7 +468,6 @@ section .p-contents {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  /* メニューが開いているときのスタイル */
   nav ul.open {
     display: flex;
   }
@@ -487,91 +483,37 @@ section .p-contents {
     display: block;
   }
 
-  /* worksセクションのwork要素を縦に並べる */
-  #works {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .box {
-    border: none;
-  }
-
-  .work {
-    width: 90%;
+  .container03>.work {
+    width: 20%;
     margin: 0 auto;
     margin-bottom: 20px;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #f9f9f9;
+    background-color: white;
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: none;
   }
 
-  .work img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 5px;
+  .container03 .work:nth-child(1), .container03 .work:nth-child(2), .container03 .work:nth-child(3) {
+    flex: none;
   }
 
-  .work a {
-    width: 80%;
-    text-align: center;
-    padding: 10px 15px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-
-  /* h1のフォントサイズ調整 */
-  h1 {
-    font-size: 28px;
-  }
-
-  /* topImageの調整 */
-  #topImage {
-    width: 90%;
-    height: auto;
-  }
-
-  #topImage img {
-    margin-top: 20px;
-    max-width: 100%;
-  }
-
-  /* セクションの調整 */
-  .container03 {
-    margin-top: 50px;
-    width: 90%;
-    padding: 20px;
-  }
-
-  .container03 .work {
-    flex: 1 1 100%;
-    margin-bottom: 20px;
-  }
 
   .container03 .work img {
-    width: 100%;
+    width: 200px;
     height: auto;
   }
 
   .box2, .hover-image, .box, .button {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 158px;
+    margin: 0 auto;
   }
 
-  /* セクションタイトルの調整 */
   .section-title {
     font-size: 28px;
   }
 
-  /* Outputセクションの調整 */
   #output {
     width: 90%;
     padding: 20px;
@@ -610,12 +552,16 @@ section .p-contents {
   }
 
   #topImage {
-    margin-top: 45%;
-
+    margin-top: 25%;
   }
 
   #marginbox {
     height: 1px;
     margin-top: -100px;
+  }
+
+  .button {
+    width: 60%;
+    height: auto
   }
 }
